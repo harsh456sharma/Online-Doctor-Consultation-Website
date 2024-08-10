@@ -14,9 +14,9 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 1.6;
-  background: #85a0d9;
+  /* background: #85a0d9; */
   color: var(--text);
-  height: 100vh;
+  height: 50%;
 }
 .logintext{
   color: var(--accent);
@@ -116,15 +116,15 @@ a:hover {
   flex-wrap: wrap;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 300px) {
   .page-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .banner {
-    background: var(--secondary);
+    /* background: var(--secondary); */
     order: 2;
   }
   .banner img {
-    width: 510px;
+    width: 200px;
   }
 }

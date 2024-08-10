@@ -1,11 +1,14 @@
+
 :root{
   --primary:#13C5DD;
 }
+.doctorform{
 
+
+}
 *{
     margin: 0;
     padding:0;
-
 }
 .backBtn{
   margin-top: 30px;
