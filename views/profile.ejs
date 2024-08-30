@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Profile</title>
+</head>
+<body>
+    <h2>User Profiles</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(user => { %>
+                <tr>
+                    <td><%= user.email %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.age %></td>
+                    <td>
+                        <a href="/edit/<%= user.email %>">Edit</a>
+                        <form action="/delete" method="post" style="display:inline;">
+                            <input type="hidden" name="email" value="<%= user.email %>">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <a href="/">Logout</a>
+</body>
+</html>
